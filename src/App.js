@@ -21,6 +21,8 @@ import Allorders from './Component/Allorders/Allorders'
 import Checkout from './Component/Checkout/Checkout'
 import WishListContextProvider from './Context/WishListContext';
 import WishList from './Component/WishList/WishList';
+import { Offline, Online } from "react-detect-offline";
+
 export default function App() {
 
   let queryClient = new QueryClient()
@@ -50,6 +52,18 @@ export default function App() {
 
   return (
     <div>
+        <div>
+    <Online>
+      <div className='alert alert-success'>
+          Only shown when you're online
+      </div>
+    </Online>
+    <Offline>
+      <div className=' alert-danger alert'>
+      Only shown offline (surprise!)
+      </div>
+    </Offline>
+  </div>
 
       <QueryClientProvider client={queryClient}  >
         <ReactQueryDevtools initialIsOpen={false} position='bottom-right' />
