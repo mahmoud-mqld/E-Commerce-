@@ -96,7 +96,7 @@ export default function Navbar() {
                 <NavLink className="nav-link" to="/login">login</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/">Register</NavLink>
+                <NavLink className="nav-link" to="/register">Register</NavLink>
               </li>
             </>}
 
