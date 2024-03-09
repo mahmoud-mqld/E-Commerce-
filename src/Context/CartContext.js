@@ -63,7 +63,7 @@ export function CartContextProvider({ children }) {
         let body = {
             shippingAddress: data
         }
-        return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url=https://mahmoud-mqld.github.io/E-Commerce-/`, body, options)
+        return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url=https://mahmoud-mqld.github.io/E-Commerce-/#/#`, body, options)
     }
     function checkoutCash(id, data) {
         let options = {
